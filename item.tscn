@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://qil4dqf66ci6"]
 
-[ext_resource type="Texture2D" uid="uid://b2bdfh5lauvsy" path="res://Peti.png" id="1_3ruyb"]
+[ext_resource type="Texture2D" uid="uid://b2bdfh5lauvsy" path="res://Sprites/Peti.png" id="1_3ruyb"]
 [ext_resource type="Script" path="res://item.gd" id="1_f7cuo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tkpc"]

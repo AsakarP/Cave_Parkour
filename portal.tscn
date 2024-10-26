@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://dscxwqpg6kew1"]
+
+[ext_resource type="Texture2D" uid="uid://bym3cqvlp7c3s" path="res://Sprites/Portals/Red_Portal-sheet.png" id="1_53wkj"]
+[ext_resource type="Script" path="res://portal.gd" id="1_j5dhr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iiqqj"]
+atlas = ExtResource("1_53wkj")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnu1a"]
+atlas = ExtResource("1_53wkj")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfago"]
+atlas = ExtResource("1_53wkj")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmwpn"]
+atlas = ExtResource("1_53wkj")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qamly"]
+atlas = ExtResource("1_53wkj")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5im8b"]
+atlas = ExtResource("1_53wkj")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uaksy"]
+atlas = ExtResource("1_53wkj")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_elb4c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iiqqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnu1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfago")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmwpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qamly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5im8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uaksy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4yr0"]
+size = Vector2(6, 29)
+
+[node name="Portal" type="Area2D"]
+script = ExtResource("1_j5dhr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_elb4c")
+autoplay = "default"
+frame_progress = 0.79411
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_e4yr0")
+
+[node name="Destinasi" type="Marker2D" parent="."]
+position = Vector2(-14, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -13,5 +13,5 @@ func _process(delta):
 
 
 func _on_pintu_masuk_body_entered(body):
-	get_tree().change_scene_to_file("res://Level_2.tscn")
+	get_tree().change_scene_to_file("res://Level1_Cave.tscn")
 	pass # Replace with function body.

@@ -1,9 +1,9 @@
 [gd_scene load_steps=26 format=3 uid="uid://d4jbyvhsqhv3m"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_wpkqi"]
-[ext_resource type="Texture2D" uid="uid://dtiwjrpt8f250" path="res://Jump Anim.png" id="2_1irsd"]
+[ext_resource type="Texture2D" uid="uid://dtiwjrpt8f250" path="res://Sprites/Jump Anim.png" id="2_1irsd"]
 [ext_resource type="Shader" path="res://player.gdshader" id="2_cj85q"]
-[ext_resource type="Texture2D" uid="uid://drf5xcauvi35o" path="res://Run Anim.png" id="3_wpoed"]
+[ext_resource type="Texture2D" uid="uid://drf5xcauvi35o" path="res://Sprites/Run Anim.png" id="3_wpoed"]
 [ext_resource type="Script" path="res://character.gd" id="5_pekup"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0lu1a"]
@@ -156,7 +156,7 @@ animations = [{
 radius = 5.0
 height = 22.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_wpkqi")
 speed = 200.0
 

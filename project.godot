@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Godot"
+config/name="Tugbes_PPG"
 run/main_scene="res://Level_1.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[global_group]
+
+Player=""
 
 [layer_names]
 

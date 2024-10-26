@@ -3,9 +3,11 @@ extends CharacterBody2D
 @export
 var speed : float
 const GRAVITY : float = 9.8
-const JUMP_SPEED : float = -300
+const JUMP_SPEED : float = -250
 var isJumping : bool = false
 var JumpCount = 0
+
+var portal_id = 0
 
 func _physics_process(delta):
 	if (!is_on_floor()): # Kalau di udara
@@ -50,8 +52,3 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	pass
-
-
-func _on_pintu_masuk_body_entered(body):
-	get_tree().change_scene_to_file("res://Level_2.tscn")
-	pass # Replace with function body.

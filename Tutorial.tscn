@@ -1,15 +1,15 @@
 [gd_scene load_steps=20 format=4 uid="uid://btuaw3hhtplsd"]
 
 [ext_resource type="Script" path="res://tutorial.gd" id="1_2y1tp"]
-[ext_resource type="Texture2D" uid="uid://b3tlg2gt3b8hv" path="res://tilemap-backgrounds.png" id="1_d36j6"]
+[ext_resource type="Texture2D" uid="uid://b3tlg2gt3b8hv" path="res://Sprites/tilemap-backgrounds.png" id="1_d36j6"]
 [ext_resource type="PackedScene" uid="uid://d4jbyvhsqhv3m" path="res://player.tscn" id="2_my3hn"]
 [ext_resource type="Script" path="res://item.gd" id="3_4kkl4"]
-[ext_resource type="Texture2D" uid="uid://b2bdfh5lauvsy" path="res://Peti.png" id="4_5jyee"]
-[ext_resource type="Texture2D" uid="uid://dywt6t8fauhdf" path="res://Arrow Side.png" id="5_eved4"]
-[ext_resource type="Texture2D" uid="uid://cyy01rlhmqp1p" path="res://Arrow Up.png" id="6_vwypt"]
-[ext_resource type="Texture2D" uid="uid://diybjvd6gtja5" path="res://Arrow Down.png" id="7_xke0n"]
-[ext_resource type="Texture2D" uid="uid://ysiyxwfviopv" path="res://Daratan.png" id="8_bwkhe"]
-[ext_resource type="Texture2D" uid="uid://cw77a1i5whlev" path="res://tilemap.png" id="9_pusvr"]
+[ext_resource type="Texture2D" uid="uid://b2bdfh5lauvsy" path="res://Sprites/Peti.png" id="4_5jyee"]
+[ext_resource type="Texture2D" uid="uid://dywt6t8fauhdf" path="res://Sprites/Arrow Side.png" id="5_eved4"]
+[ext_resource type="Texture2D" uid="uid://cyy01rlhmqp1p" path="res://Sprites/Arrow Up.png" id="6_vwypt"]
+[ext_resource type="Texture2D" uid="uid://diybjvd6gtja5" path="res://Sprites/Arrow Down.png" id="7_xke0n"]
+[ext_resource type="Texture2D" uid="uid://ysiyxwfviopv" path="res://Sprites/Daratan.png" id="8_bwkhe"]
+[ext_resource type="Texture2D" uid="uid://cw77a1i5whlev" path="res://Sprites/tilemap.png" id="9_pusvr"]
 [ext_resource type="PackedScene" uid="uid://qil4dqf66ci6" path="res://item.tscn" id="10_q7gj3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1n1mx"]
@@ -353,10 +353,10 @@ physics_layer_0/collision_layer = 9
 physics_layer_0/collision_mask = 4
 sources/1 = SubResource("TileSetAtlasSource_52wlk")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7cui2"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_77blf"]
 font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7cui2"]
 
 [node name="Tutorial_stage" type="Node2D"]
 position = Vector2(237, -8)
@@ -376,7 +376,7 @@ tile_map_data = PackedByteArray("AAD+/wEAAAAGAAAAAAD+/wIAAAAGAAAAAAD+/wMAAAAGAAA
 tile_set = SubResource("TileSet_5tgb1")
 
 [node name="Player" parent="." instance=ExtResource("2_my3hn")]
-position = Vector2(20, 172)
+position = Vector2(18, 180)
 
 [node name="Kumpulan_item" type="Node2D" parent="."]
 
@@ -521,7 +521,7 @@ shape = SubResource("RectangleShape2D_s710h")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Platform beda"]
 scale = Vector2(0.985249, 1.04902)
-tile_map_data = PackedByteArray("AABGAA8AAQACAAAAAABHAA8AAQACAAAAAABIAA8AAQACAAAAAABJAA8AAQACAAAAAABFAA8AAQABAAAAAABLAA8AAQADAAAAAABKAA8AAQACAAAAAAAVAAAAAQAHAAEAAAA=")
+tile_map_data = PackedByteArray("AABGAA8AAQACAAAAAABHAA8AAQACAAAAAABIAA8AAQACAAAAAABJAA8AAQACAAAAAABFAA8AAQABAAAAAABLAA8AAQADAAAAAABKAA8AAQACAAAAAAAVAAAAAQAHAAEAAABJABYAAQABAAAAAABKABYAAQACAAAAAABLABYAAQADAAAAAABLABMAAQABAAAAAABMABMAAQACAAAAAABNABMAAQADAAAAAABGAAsAAQABAAAAAABHAAsAAQACAAAAAABIAAsAAQADAAAAAAAvAAYAAQABAAAAAAAwAAYAAQACAAAAAAAxAAYAAQADAAAAAAAsAAMAAQABAAAAAAAtAAMAAQACAAAAAAAuAAMAAQADAAAAAAA=")
 tile_set = SubResource("TileSet_hxb8o")
 
 [node name="ItemArea" parent="." instance=ExtResource("10_q7gj3")]
@@ -536,14 +536,6 @@ position = Vector2(1306, 254)
 [node name="ItemArea4" parent="." instance=ExtResource("10_q7gj3")]
 position = Vector2(1527, 325)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 127.0
-offset_top = 115.0
-offset_right = 283.0
-offset_bottom = 138.0
-text = "Press Space to Jump"
-label_settings = SubResource("LabelSettings_77blf")
-
 [node name="Kunci" type="Area2D" parent="."]
 position = Vector2(382, 9)
 collision_layer = 8
@@ -551,6 +543,32 @@ collision_mask = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kunci"]
 shape = SubResource("CircleShape2D_7cui2")
+
+[node name="Kumpulan_Label" type="Node2D" parent="."]
+
+[node name="Label_1" type="Label" parent="Kumpulan_Label"]
+offset_left = 332.0
+offset_top = 108.0
+offset_right = 488.0
+offset_bottom = 131.0
+text = "Press Space to Jump"
+label_settings = SubResource("LabelSettings_77blf")
+
+[node name="Label_2" type="Label" parent="Kumpulan_Label"]
+offset_left = 472.0
+offset_top = 331.0
+offset_right = 739.0
+offset_bottom = 354.0
+text = "Press Space twice for Double Jump"
+label_settings = SubResource("LabelSettings_77blf")
+
+[node name="Label_3" type="Label" parent="Kumpulan_Label"]
+offset_left = 66.0
+offset_top = 109.0
+offset_right = 254.0
+offset_bottom = 132.0
+text = "Use Arrow Keys to move"
+label_settings = SubResource("LabelSettings_77blf")
 
 [connection signal="body_entered" from="Kumpulan_item/Item" to="Kumpulan_item/Item" method="_on_body_entered"]
 [connection signal="body_entered" from="Kumpulan_item/Item3" to="Kumpulan_item/Item3" method="_on_body_entered"]
