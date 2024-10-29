@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq27dv7wk7mcc"]
+
+[ext_resource type="Texture2D" uid="uid://dqh1yv8rk87ub" path="res://Sprites/Free/Traps/Spikes/Idle.png" id="1_2xru3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gmqc"]
+size = Vector2(23, 532)
+
+[node name="long_spike" type="Node2D"]
+
+[node name="long_spike" type="Area2D" parent="."]
+rotation = 1.5708
+collision_layer = 8
+collision_mask = 4
+
+[node name="Kumpulan Spikes sprite" type="Node2D" parent="long_spike"]
+
+[node name="Sprite2D" type="Sprite2D" parent="long_spike/Kumpulan Spikes sprite"]
+position = Vector2(-0.4375, -1.1875)
+scale = Vector2(0.945313, 1.14844)
+texture = ExtResource("1_2xru3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long_spike"]
+position = Vector2(-3.5, 2.84217e-14)
+shape = SubResource("RectangleShape2D_8gmqc")
